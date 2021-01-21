@@ -1,0 +1,18 @@
+{{ child('debug.container.style') }}
+<div id="leafiny-debug">
+    <table>
+        <tr>
+            <th></th>
+            <th>Init (ms)</th>
+            <th>Type</th>
+            <th>Class</th>
+            <th>Identifier</th>
+            <th>Parent</th>
+            <th>key</th>
+            <th>Custom</th>
+        </tr>
+        {% for object in block.getObjects %}
+            {{ block.objectAsHtml(object)|raw }}
+        {% endfor %}
+    </table>
+</div>

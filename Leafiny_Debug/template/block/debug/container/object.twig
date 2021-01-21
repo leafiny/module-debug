@@ -1,0 +1,15 @@
+{% set object = block.getCustom('debug_object') %}
+<tr>
+    <td>#{{ object.getDebugNumber }}</td>
+    <td>{{ (object.getDebugTime * 1000)|round(4) }}</td>
+    <td class="default {{ object.getObjectType }}">{{ object.getObjectType }}</td>
+    <td>{{ object|debug_get_class }}</td>
+    <td>{{ object.getObjectIdentifier }}</td>
+    <td>{{ object.getParentObjectIdentifier }}</td>
+    <td>{{ object.getObjectKey }}</td>
+    <td>
+        {% for var,value in object.getData('custom').toArray %}
+            <p><strong>{{ var }}:</strong> {{ value|debug_print_data }}</p>
+        {% endfor %}
+    </td>
+</tr>
