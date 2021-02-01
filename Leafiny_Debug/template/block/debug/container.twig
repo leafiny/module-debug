@@ -15,4 +15,14 @@
             {{ block.objectAsHtml(object)|raw }}
         {% endfor %}
     </table>
+    <table>
+        <tr>
+            <th></th>
+            <th>Query</th>
+            <th>Params</th>
+        </tr>
+        {% for object in block.getQueries %}
+            {{ block.queryAsHtml(object)|raw }}
+        {% endfor %}
+    </table>
 </div>

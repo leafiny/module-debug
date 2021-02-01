@@ -1,0 +1,10 @@
+{% set object = block.getCustom('debug_query') %}
+<tr>
+    <td>#{{ object.getNumber }}</td>
+    <td>{{ object.getQuery }}</td>
+    <td class="params">
+        {% for key,value in object.getParams %}
+            <p><strong>#{{ loop.index }}:</strong> {{ value }}</p>
+        {% endfor %}
+    </td>
+</tr>

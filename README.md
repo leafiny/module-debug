@@ -1,6 +1,6 @@
 # Leafiny_Debug
 
-The module add an HTML table at the end of the page with all objects loaded: page, block, model, helper...
+The module add an HTML table at the end of the page with all queries executed and all objects loaded: page, block, model, helper...
 
 All custom params are showed.
 

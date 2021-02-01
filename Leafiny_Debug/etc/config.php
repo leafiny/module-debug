@@ -17,6 +17,9 @@ $config = [
         ],
         'debug.container.object' => [
             'template' => 'Leafiny_Debug::block/debug/container/object.twig'
+        ],
+        'debug.container.query' => [
+            'template' => 'Leafiny_Debug::block/debug/container/query.twig'
         ]
     ],
 
@@ -27,11 +30,17 @@ $config = [
         'page_render_after' => [
             'debug_print_data' => 10000,
         ],
+        'model_object_init_after' => [
+            'debug_db_queries' => 10000,
+        ]
     ],
 
     'event' => [
         'debug' => [
             'class' => Debug_Model_Debug::class
+        ],
+        'debug_db_queries' => [
+            'class' => Debug_Observer_Queries::class
         ],
         'debug_object_add' => [
             'class' => Debug_Observer_Add::class
