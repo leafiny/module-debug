@@ -43,7 +43,7 @@ class Debug_Observer_Add extends Debug_Observer_Abstract
             }
 
             /** @var Debug_Model_Debug $debug */
-            $debug = App::getSingleton('event', 'debug');
+            $debug = App::getSingleton('observer', 'debug');
             $debug->addObject($object);
         };
     }

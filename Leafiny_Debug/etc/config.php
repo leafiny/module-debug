@@ -23,7 +23,7 @@ $config = [
         ]
     ],
 
-    'observer' => [
+    'events' => [
         'object_init_after' => [
             'debug_object_add' => 10000,
         ],
@@ -35,7 +35,7 @@ $config = [
         ]
     ],
 
-    'event' => [
+    'observer' => [
         'debug' => [
             'class' => Debug_Model_Debug::class
         ],

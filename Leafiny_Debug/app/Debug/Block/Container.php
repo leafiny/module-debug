@@ -23,7 +23,7 @@ class Debug_Block_Container extends Core_Block
     public function getObjects(): array
     {
         /** @var Debug_Model_Debug $debug */
-        $debug = App::getSingleton('event', 'debug');
+        $debug = App::getSingleton('observer', 'debug');
 
         return $debug->getObjects();
     }
