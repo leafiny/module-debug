@@ -13,7 +13,7 @@ declare(strict_types=1);
 /**
  * Class Debug_Observer_Abstract
  */
-abstract class Debug_Observer_Abstract extends Core_Event
+abstract class Debug_Observer_Abstract extends Core_Observer implements Core_Interface_Observer
 {
     /**
      * Retrieve debug only objects
